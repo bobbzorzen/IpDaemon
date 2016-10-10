@@ -7,13 +7,13 @@ $mail->isSMTP();
 
 $mail->Host = 'smtp.gmail.com';                       	 // Specify main and backup server
 $mail->SMTPAuth = true;                               	 // Enable SMTP authentication
-$mail->Username = 'bobbzorzen@gmail.com';             	 // SMTP username
-$mail->Password = 'Rex3333*';                         	 // SMTP password
+$mail->Username = '[gmailAddress]';             	       // SMTP username
+$mail->Password = '[password]';                         // SMTP password
 $mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
 $mail->Port = 587;                                       // Set the SMTP port number - 587 for authenticated TLS
-$mail->setFrom('Bobbzorzen@gmail.com', 'Leopold Olsson');// Set who the message is to be sent from
-$mail->addReplyTo('bobbzorzen@gmail.com', 'First Last'); // Set an alternative reply-to address
-$mail->addAddress('bobbzorzen@gmail.com');		 // Add a recipient
+$mail->setFrom($mail->Username, '[Firstname Lastname]');// Set who the message is to be sent from
+$mail->addReplyTo($mail->Username, '[Firstname Lastname]'); // Set an alternative reply-to address
+$mail->addAddress($mail->Username);		 // Add a recipient
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
